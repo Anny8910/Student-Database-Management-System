@@ -1,0 +1,47 @@
+DROP DATABASE library;
+
+CREATE DATABASE library;
+
+USE library;
+
+CREATE TABLE student_details(
+Student_ID varchar(30) primary key not null,
+First_Name char(20),
+Last_Name char(20),
+Address tinytext,
+Data_ScienceII char(10) not null,
+JAVA char(10) not null,
+Operating_System char(10) not null,
+Data_Communication char(10) not null,
+Signal_System char(10) not null,
+SGPA float(11,2));
+
+CREATE TABLE login_details(
+Username varchar(10) primary key,
+Password varchar(10));
+
+CREATE TABLE subject_details(
+Subject_Code char(10) primary key,
+Subject_Name varchar(20),
+Subject_Credit int(10));
+
+INSERT INTO student_details VALUES ('18011/322', 'Ananya', 'Sarkar', 'North 24 Parganas,West Bengal', 'EX', 'B', 'A', 'A','Ex','9.06');
+
+INSERT INTO student_details VALUES ('18088/399', 'Sneha', 'Sana', 'Ranchi,Jharkhand', 'A', 'B', 'A', 'C','EX','8.41');
+
+INSERT INTO student_details VALUES ('18096/407', 'Swapnil', 'Srivastava', 'Lucknow,Uttar Pradesh', 'EX', 'EX', 'A', 'EX','Ex','9.76');
+
+INSERT INTO subject_details VALUES ('CS 401', 'Operating System', '4');
+
+INSERT INTO subject_details VALUES ('CS 402', 'Data Science II', '3');
+
+INSERT INTO subject_details VALUES ('CS 403', 'Java(00P)', '4');
+
+INSERT INTO subject_details VALUES ('EC 401', 'Data Communication', '4');
+
+INSERT INTO subject_details VALUES ('EC 402', 'Signal & System', '2');
+
+INSERT INTO login_details VALUES ('Admin', '1234');
+
+
+
